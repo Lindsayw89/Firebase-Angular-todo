@@ -1,0 +1,8 @@
+<div *ngIf="items?.length > 0; else noItems">
+<ul *ngFor="let item of items" class="collection">
+    <li class="collctoin-item"><strong>{{item.title}}</strong>: {{item.description}}</li>
+</ul>
+</div>
+<ng-template #noItems>
+    <h5> There are no items to list</h5>
+</ng-template>
